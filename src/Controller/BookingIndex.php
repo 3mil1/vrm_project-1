@@ -70,7 +70,8 @@ class BookingIndex extends AbstractController
                 'required' => true
             ])
             ->add('additionalInformation', TextareaType::class, [
-                'required' => false
+                'required' => false,
+                'empty_data' => 'no additional information'
             ])
             ->add('submit', SubmitType::class, ['label' => 'Create Bookings'])
             ->getForm();
